@@ -3,17 +3,18 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.sunny.ddrpc</groupId>
-    <artifactId>ddrpc</artifactId>
+    <groupId>com.sunny.edrpc</groupId>
+    <artifactId>edrpc</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.sunny.ddrpc.mgt</groupId>
-  <artifactId>ddrpc-mgt</artifactId>
+  <groupId>com.sunny.edrpc.demo</groupId>
+  <artifactId>edrpc-demo</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>ddrpc-mgt</name>
+  <name>edrpc-demo</name>
   <url>http://maven.apache.org</url>
 
   <dependencies>
+
   </dependencies>
 </project>
