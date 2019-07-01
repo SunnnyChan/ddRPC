@@ -2,6 +2,10 @@ package com.sunny.edrpc.demo.event;
 
 import java.util.UUID;
 
+/**
+ * @author sunnnychan@gmail.com
+ * 事件实现类
+ */
 public class EventImplement implements Event {
     private String name;
     private String id;

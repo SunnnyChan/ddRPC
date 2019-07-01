@@ -1,10 +1,12 @@
 package com.sunny.edrpc.demo.rpc;
 
-import com.sunny.edrpc.demo.event.*;
+import com.sunny.edrpc.demo.event.EventHandler;
+
 import java.util.HashMap;
 
 /**
- * 一次基于Http协议的RPC的处理
+ * @author sunnnychan@gmail.com
+ * 基于HTTP协议的RPC，实现了事件处理接口
  */
 
 public class HttpCall implements EventHandler {
@@ -14,19 +16,9 @@ public class HttpCall implements EventHandler {
     private HashMap<String, String> cookies = new HashMap<>();
     private HashMap<String, String> header = new HashMap<>();
 
-    private EventGroup eventGroup;
-
     public HttpCall(EdRpcRequest rpcRequest, HashMap<String, String> cookies, HashMap<String, String> header) {
         this.cookies = cookies;
         this.header = header;
-
-        // 一次 RPC 的触发是由一组请求数据的准备事件触发的
-        this.eventGroup = new EventGroup(this);
-        this.eventGroup.setEventSet(rpcRequest.getEvents());
-        for (Event event : rpcRequest.getEvents()) {
-            EventMgt.register(event);
-            event.setEventGroup(this.eventGroup);
-        }
     }
 
     public HashMap<String, String> getCookies() {
@@ -43,10 +35,6 @@ public class HttpCall implements EventHandler {
 
     public void setHeader(HashMap<String, String> header) {
         this.header = header;
-    }
-
-    public String getResult() {
-        return EventMgt.getResult(this.eventGroup.getId());
     }
 
     // 事件处理

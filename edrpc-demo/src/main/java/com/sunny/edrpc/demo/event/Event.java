@@ -1,10 +1,12 @@
 package com.sunny.edrpc.demo.event;
 
 /**
+ * @author sunnnychan@gmail.com
  * 事件接口
  */
 
 public interface Event {
+    String getName();
 
     String getId();
 

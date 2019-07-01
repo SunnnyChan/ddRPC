@@ -1,5 +1,9 @@
 package com.sunny.edrpc.demo.event;
 
+/**
+ * @author sunnnychan@gmail.com
+ * 事假状态
+ */
 public enum EventStatus {
 
     CREATED("0", "已创建"), REGISTERED("1", "已注册"), READY("2", "已发生"), HANDLED("3", "已处理");
