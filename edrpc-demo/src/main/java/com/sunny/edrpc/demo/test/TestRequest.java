@@ -2,6 +2,7 @@ package com.sunny.edrpc.demo.test;
 
 import com.sunny.edrpc.demo.annotation.ReqFieldSetEvent;
 import com.sunny.edrpc.demo.rpc.EdRpcRequest;
+
 /**
  * @author sunnnychan@gmail.com
  * 业务层的RPC请求数据对象

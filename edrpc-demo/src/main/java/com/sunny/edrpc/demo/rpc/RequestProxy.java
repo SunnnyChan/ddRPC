@@ -32,7 +32,7 @@ public class RequestProxy<T> implements MethodInterceptor {
     }
 
     @Override
-    public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable{
+    public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         Object result = methodProxy.invokeSuper(proxy, args);
         // ReqFieldSetEvent 注解的方法需要发送 事件ID，表示事件已触发
         if (method.isAnnotationPresent(ReqFieldSetEvent.class)) {
