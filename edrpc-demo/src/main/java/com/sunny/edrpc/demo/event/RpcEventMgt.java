@@ -34,8 +34,8 @@ public class RpcEventMgt<T> {
             }
             // 如果有 ReqFieldSetEvent 注解标识，则创建对应的事件
             EventImplement event = new EventImplement("Event-" + c.getName() + "-" + method.getName());
-            event.setEventStatus(EventStatus.REGISTERED);
             event.setEventGroup(eventGroup);
+            event.setEventStatus(EventStatus.REGISTERED);
             // 保持方法与事件的映射，以在方法执行时，通知事件触发
             methodNameEventMap.put(method.getName(), event);
             // 保存事件状态
