@@ -12,7 +12,7 @@ import java.util.HashMap;
 
 /**
  * @author sunnnychan@gmail.com
- * RPC RequestProxy 代理类
+ * RPC Request 代理类
  */
 public class RequestProxy<T> implements MethodInterceptor {
     private T target;
